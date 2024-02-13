@@ -1,0 +1,51 @@
+.header_link{
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link_item{
+    margin-right: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+}
+
+.link_home,
+.link_attendance{
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav__button{
+    border: none;
+    font-weight: bold;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.users_content{
+    margin:0 auto;
+    width: 80%;
+}
+
+.title{
+    margin:0 auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.users{
+    text-align: center;
+    padding: 10px;
+}
+
+.users_name{
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}

@@ -1,0 +1,99 @@
+.header_link{
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link_item{
+    margin-right: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+}
+
+.link_home,
+.link_personal{
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav__button{
+    border: none;
+    font-weight: bold;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+
+.attendance_content{
+    margin:0 auto;
+    width: 80%;
+}
+
+.date{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date_preview,
+.date_next{
+    background-color: #fff;
+    border:1px solid #214be8;
+    height: 25px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.date_preview a,
+.date_next a{
+    text-decoration: none;
+    color: #214be8;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.date_title{
+    text-align: center;
+    margin: 0 30px;
+}
+
+.records_content{
+    margin: 30px auto;
+}
+
+.records_table{
+    width: 100%;
+}
+
+.table_header_item,
+.table_records_item{
+    border-top:1px solid #8b8b8b ;
+}
+
+.item-title-name,
+.item-title-start,
+.item-title-end,
+.item-title-break-time,
+.item-title-work-time{
+    padding:15px 30px;
+    font-weight: bold;
+}
+
+.records_item-name,
+.records_item-start,
+.records_item-end,
+.records_item-break,
+.records_item-work{
+    padding: 15px 30px;
+}
+
+
+

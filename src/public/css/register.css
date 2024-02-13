@@ -1,0 +1,48 @@
+.register_title {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.register_content {
+    margin: 0 auto;
+}
+
+.register_item,
+.button_register {
+    margin: 30px auto;
+    width: 350px;
+}
+
+.register_item input {
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border: 2px solid #8b8b8b;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+}
+
+.button_register button {
+    background-color: #214be0;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    border: 2px solid #214be0;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+}
+
+.register_text {
+    text-align: center;
+    color: #8b8b8b;
+}
+
+.link_login {
+    text-align: center;
+}
+
+.link_login a {
+    text-decoration: none;
+    color: #214be0;
+}

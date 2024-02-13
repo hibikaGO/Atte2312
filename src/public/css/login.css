@@ -1,0 +1,49 @@
+.login_title{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.login_content{
+    margin: 0 auto;
+}
+
+.login_item,
+.button_login{
+    margin:30px auto;
+    width: 350px;
+}
+
+.login_item input{
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border:2px solid #8b8b8b;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+}
+
+.button_login button{
+    background-color: #214be0;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    border:2px solid #214be0;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+}
+
+.login_text{
+    text-align: center;
+    color: #8b8b8b;
+}
+
+.link_register{
+    text-align: center;
+}
+
+.link_register a{
+    text-decoration: none;
+    color: #214be0;
+}
+

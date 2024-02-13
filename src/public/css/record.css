@@ -1,0 +1,67 @@
+.header_link{
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link_item{
+    margin-right: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+}
+
+.link_home,
+.link_personal{
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav__button{
+    border: none;
+    font-weight: bold;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.record_title{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.record_content{
+    margin:30px auto;
+    width: 80%;
+}
+
+.button_row{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_record{
+    width: 49%;
+}
+
+.button_record_button{
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    font-size: x-large;
+    border: none;
+    font-weight: bold;
+}
+
+.hidden_button{
+    width: 100%;
+    height: 200px;
+    background-color: #dadada;
+    color: #b2b2b2;
+    font-size: x-large;
+    border: none;
+    font-weight: bold;
+}
