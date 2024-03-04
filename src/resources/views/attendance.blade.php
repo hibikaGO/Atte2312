@@ -87,7 +87,9 @@
                         </td>
                         <td class="records_item-end">
                             <div class="result-end">
+                            @if($data->end_time)
                                 {{ $data->end_time }}
+                            @endif
                             </div>
                         </td>
                         <td class="records_item-break">

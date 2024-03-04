@@ -103,7 +103,9 @@ class AttendanceController extends Controller
             $data->break_time = $breakTime;
             $data->work_time = $workTime;
             $data->start_time = Carbon::parse($data->start_time)->format('H:i:s');
-            $data->end_time = Carbon::parse($data->end_time)->format('H:i:s');
+            if ($data->end_time !== null) {
+                $data->end_time = Carbon::parse($data->end_time)->format('H:i:s');
+            }
         }
 
 
@@ -138,13 +140,28 @@ class AttendanceController extends Controller
     {
         $userId = Auth::id();
         $endTime = now();
-
         $attendanceRecord = AttendanceRecord::where('user_id', $userId)
-            ->whereNull('end_time')
-            ->first();
+        ->whereNull('end_time')
+        ->first();
 
-        if ($attendanceRecord) {
-            $attendanceRecord->update([
+        if ($attendanceRecord && is_object($attendanceRecord->start_time) && $endTime->format('H:i:s') > '00:00:00' && $endTime->copy()->format('Y-m-d') > $attendanceRecord->start_time->format('Y-m-d'))
+        {
+            if ($attendanceRecord) {
+                $attendanceRecord->update([
+                    'end_time' => $endTime->copy()->setTime(23, 59, 59),
+                ]);
+
+                $totalBreakTime = $this->calculateTotalBreakTime($attendanceRecord);
+                $attendanceRecord->update([
+                    'total_break_time' => $totalBreakTime,
+                ]);
+            }
+
+            $newStartTime = Carbon::createFromFormat('Y-m-d H:i:s', $endTime->copy()->format('Y-m-d') . ' 00:00:00');
+
+            $newAttendanceRecord = AttendanceRecord::create([
+                'user_id' => $userId,
+                'start_time' => $newStartTime,
                 'end_time' => $endTime,
             ]);
 
@@ -153,7 +170,26 @@ class AttendanceController extends Controller
                 'total_break_time' => $totalBreakTime,
             ]);
         }
+        else
+        {
+            $attendanceRecord = AttendanceRecord::where('user_id', $userId)
+                ->whereNull('end_time')
+                ->first();
+
+            if ($attendanceRecord) {
+                $attendanceRecord->update([
+                    'end_time' => $endTime,
+                ]);
+
+                $totalBreakTime = $this->calculateTotalBreakTime($attendanceRecord);
+                $attendanceRecord->update([
+                    'total_break_time' => $totalBreakTime,
+                ]);
+            }
+        }
         return redirect()->back();
+
+
 
     }
 
@@ -179,7 +215,6 @@ class AttendanceController extends Controller
 
     public function endBreak(Request $request)
     {
-        
         $userId = Auth::id();
         $breakEndTime = now();
 
@@ -265,7 +300,9 @@ class AttendanceController extends Controller
             $data->break_time = $breakTime;
             $data->work_time = $workTime;
             $data->start_time = Carbon::parse($data->start_time)->format('H:i:s');
-            $data->end_time = Carbon::parse($data->end_time)->format('H:i:s');
+            if ($data->end_time !== null) {
+                $data->end_time = Carbon::parse($data->end_time)->format('H:i:s');
+            }
         }
 
         $year = Carbon::parse($date)->year;
