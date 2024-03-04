@@ -19,10 +19,10 @@ Mysql 8.0.26
 PHP 8.2.11  
 
 ## テーブル設計
-
+![Atte_table](https://github.com/hibikaGO/Atte2312/assets/145337159/b1267238-3712-4b86-9b62-f4ee693d39a7)
 
 ## ER図
-
+![attendance](https://github.com/hibikaGO/Atte2312/assets/145337159/69a84d40-de03-492f-99d5-3564167cb02f)
 
 ## 環境構築
  Dockerビルド  
