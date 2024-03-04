@@ -27,7 +27,7 @@ PHP 8.2.11
 ## 環境構築
  Dockerビルド  
  
- 1.git clone  
+ 1.git clone git@github.com:hibikaGO/Atte2312.git
  2.docker-compose up -d --build  
 
  Laravel環境構築  
